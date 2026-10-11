@@ -1,4 +1,4 @@
-public class Main {
+public class Exercises_String {
     public static void main(String[] args) {
 
         String numero = "5";
