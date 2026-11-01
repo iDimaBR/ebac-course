@@ -1,17 +1,21 @@
+package Objects.Alunos;
+
+import Objects.Carros.LeitorConsole;
+
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            LeitorConsole leitor = new LeitorConsole(scanner);
+            Objects.Carros.LeitorConsole leitor = new Objects.Carros.LeitorConsole(scanner);
 
             Aluno[] alunos = cadastrarAlunos(leitor);
             exibirResumo(alunos);
         }
     }
 
-    private static Aluno[] cadastrarAlunos(LeitorConsole leitor) {
+    private static Aluno[] cadastrarAlunos(Objects.Carros.LeitorConsole leitor) {
         int quantidade = leitor.lerInteiroPositivo("Quantos alunos deseja cadastrar? ");
         Aluno[] alunos = new Aluno[quantidade];
 
@@ -22,7 +26,7 @@ public class Main {
         return alunos;
     }
 
-    private static Aluno lerAluno(LeitorConsole leitor) {
+    private static Aluno lerAluno(Objects.Carros.LeitorConsole leitor) {
         String nome = leitor.lerTexto("Nome: ");
         int quantidadeNotas = leitor.lerInteiroPositivo("Quantidade de notas: ");
         return new Aluno(nome, lerNotas(leitor, quantidadeNotas));

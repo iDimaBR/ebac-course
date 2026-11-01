@@ -1,3 +1,5 @@
+package Objects.Alunos;
+
 public class Aluno {
 
     private String nome;

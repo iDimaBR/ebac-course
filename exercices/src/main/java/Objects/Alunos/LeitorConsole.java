@@ -1,3 +1,5 @@
+package Objects.Alunos;
+
 import java.util.Scanner;
 
 public class LeitorConsole {
